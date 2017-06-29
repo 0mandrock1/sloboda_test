@@ -1,0 +1,5 @@
+<ul class='nav nav-pills'>
+    <li class="<%= 'active' if action_name == 'index' and controller_name == 'books' %>"><%= link_to 'home', root_path, role: 'presentation' %></li>
+    <li class="<%= 'active' if action_name == 'new' and controller_name == 'books' %>"><%= link_to 'new', new_book_path, role: 'presentation' %></li>
+    <li class="<%= 'active' if action_name == 'my_books' %>"><%= link_to 'my books', my_books_path, role: 'presentation'  %></li>
+</ul>

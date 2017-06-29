@@ -1,0 +1,13 @@
+<%= bootstrap_form_for @book do |f| %>
+    <%= f.text_field :title %>
+    <%= f.text_field :author %>
+    <%= f.text_area :description %>
+    <%= f.check_box :published %>
+    <label class="control-label" for="book_tag_list">Categoties</label>
+    <%= f.text_field :tag_list, value: f.object.tag_list.to_s, hide_label: true, 'data-role'=>'tagsinput' %>
+    <%= image_tag(@book.cover.thumb.url) if @book.cover? %>
+    <%= f.file_field :cover %>
+    <%= f.hidden_field :cover_cache %>
+
+    <%= f.submit :save %>
+<% end %>

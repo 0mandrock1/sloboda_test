@@ -1,0 +1,14 @@
+<div class="row">
+<% @books.each do |book| %>
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+        <%= image_tag book.cover.thumb.url %>
+        <div class='caption'>
+            <h3><%= book.title %></h3>
+            <p><%= book.tags.join(', ') %></p>
+            <p><%= link_to 'more', book, class: 'btn btn-primary' %></p>
+        </div>
+        </div>
+        </div>
+<% end %>
+</div>
