@@ -10,6 +10,7 @@ default: &default
   encoding: unicode
   username: mark
   password: mandrick
+  template: template0
 
 development:
   <<: *default
